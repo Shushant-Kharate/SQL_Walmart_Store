@@ -95,10 +95,8 @@ select
 	Branch,
     Date,
     sum(gross_income) as Gross_income,
-    lag(sum(gross_income)) over(
-		partition by branch order by date) as Lag_Sum,
-	sum(gross_income)- lag(sum(gross_income)) over(
-		partition by branch order by date) as Comparision
+    lag(sum(gross_income)) over(partition by branch order by date) as Lag_Sum,
+	sum(gross_income)- lag(sum(gross_income)) over(partition by branch order by date) as Comparision
 from walmart
 group by Branch, Date
 order by Branch, Date;
@@ -221,10 +219,10 @@ Hi, I'm **Shushant Kharate**, a 2nd-year B.Tech student in Information Technolog
 -  **Email**: [skharet215@gmail.com](mailto:skharet215@gmail.com)  
 -  **LinkedIn**: [linkedin.com/in/shushant-kharate-2b490a376](https://www.linkedin.com/in/shushant-kharate-2b490a376)  
 -  **Phone**: +91 7208494564
--  
-I'm always open to feedback, collaborations, or simply discussing cool tech ideas. Feel free to connect!
+  
+### I'm always open to feedback, collaborations, or simply discussing cool tech ideas. Feel free to connect!
 ---
 
-🙏 Thank You
+## 🙏 Thank You
 Thank you for checking out this project!
 If you found this repository insightful or helpful, feel free to ⭐️ star it and share your feedback.
